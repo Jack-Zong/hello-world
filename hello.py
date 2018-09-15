@@ -11,7 +11,7 @@ def index():
     return '<h1> Hello World! </h1>'
 # 如果部署程序的服务器域名为www.example.com，在浏览器中访问该域名时，会触发index()程序，返回值称为响应，即显示给用户的文档。
 
-@app.route('/')     # 动态路由：访问这个地址时，会看到一则针对个人的欢迎信息。
+@app.route('/user/<name>')     # 动态路由：访问这个地址时，会看到一则针对个人的欢迎信息。
 def user(name):
     return '<h1> Hello, %s! </h1>' %name
 
